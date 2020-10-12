@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="p7">
+  <ClassDiagramComponents>
+    <Class name="Cliente" package="" visibility="public" xPosition="14.0" yPosition="43.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="ciudad" type="String" visibility="private"/>
+        <Field name="direccion" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="ciudad"/>
+          <Argument type="String" name="direccion"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setCiudad" returnType="void" visibility="public">
+          <Argument type="String" name="ciudad"/>
+        </Method>
+        <Method name="getCiudad" returnType="String" visibility="public"/>
+        <Method name="setDireccion" returnType="void" visibility="public">
+          <Argument type="String" name="direccion"/>
+        </Method>
+        <Method name="getDireccion" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Directorio" package="" visibility="public" xPosition="409.0" yPosition="71.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="agregarCliente" returnType="void" visibility="public">
+          <Argument type="Cliente" name="cliente"/>
+          <Argument type="long" name="telefono"/>
+        </Method>
+        <Method name="buscarCliente" returnType="long" visibility="public"/>
+        <Method name="buscarTelefono" returnType="Cliente" visibility="public"/>
+        <Method name="borrarCliente" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="lista de" source="Directorio" target="Cliente" type="Default" sourceCardinality="0..1" targetCardinality="0..*" collectionType="List"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
